@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phone Hunter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@3.7.7/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Tailwind CSS File Link -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-4xl text-center py-3 font-bold">
+        Welcome to my Phone Hunter!
+      </h2>
+      <div class="flex flex-col md:flex-row justify-center items-center md:gap-2 gap-4 mt-2">
+        <input
+          id="input-field"
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered input-primary w-full max-w-xs"
+        />
+        <button onclick="searchElement()" class="btn btn-success text-white">Search</button>
+      </div>
+      <div id="error-message" class="text-red-500 mt-3">
+        <h2 class="text-red-500 text-lg text-center font-semibold">No Phone Found. Please try a new Search!</h2>
+      </div>
+    </header>
+    <main>
+      <section class="md:w-10/12 mx-auto px-4 my-5">
+        <div
+          id="phones-container"
+          class="grid md:grid-cols-3 gap-4 mt-10"
+        ></div>
+        <!-- The button to open modal -->
+        <div class="modal" id="phoneModal">
+          <div class="modal-box px-10">
+            <h3 id="phone-name" class="font-bold text-lg"></h3>
+            <p id="details-container" class="py-4">
+              
+            </p>
+            <div class="modal-action">
+              <a href="#" class="btn">Yay!</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Custom JS File Link -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
